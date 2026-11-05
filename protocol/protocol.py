@@ -217,7 +217,7 @@ def answer_to_field(answer: str, q: int) -> int:
     """Hash a string answer to a field element mod q using SHA-256."""
     normalized = answer.strip().lower()
     digest = hashlib.sha256(normalized.encode('utf-8')).digest()
-    return int.from_bytes(digest, "big") % q
+    return int.from_bytes(digest, "big") % q 
 
 
 if __name__ == "__main__":
